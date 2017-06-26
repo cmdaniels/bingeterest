@@ -8,15 +8,15 @@ app.get('/', function(req, res) {
 });
 
 app.get('/recent', function(req, res) {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/recent.html');
 });
 
 app.get('/bingeboard', function(req, res) {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/bingeboard.html');
 });
 
 app.get('/:uid', function(req, res) {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/user.html');
 });
 
 app.listen(process.env.PORT || 3000, function(){

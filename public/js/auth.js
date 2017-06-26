@@ -1,5 +1,6 @@
 var provider = new firebase.auth.TwitterAuthProvider();
 var userId;
+var displayName;
 
 function signin() {
   firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -29,11 +30,15 @@ firebase.auth().onAuthStateChanged(function(user) {
     $('#navbar-signin').addClass('hidden');
     $('#navbar-signout').removeClass('hidden');
     $('#navbar-bingeboard').removeClass('hidden');
+    $('#navbar-add-binge').removeClass('hidden');
     userId = user.uid;
+    displayName = user.displayName;
   } else {
     $('#navbar-signout').addClass('hidden');
     $('#navbar-bingeboard').addClass('hidden');
+    $('#navbar-add-binge').addClass('hidden');
     $('#navbar-signin').removeClass('hidden');
     userId = '';
+    displayName = '';
   }
 });
