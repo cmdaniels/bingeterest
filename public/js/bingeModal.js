@@ -17,7 +17,7 @@ function addBinge() {
       '<a href="#" class="cancel" onclick="deleteBinge(' + id + ')">&times;</a>' +
     '</div>' +
     '<div class="panel-body">' +
-      '<a href="#" class="thumbnail"><img src="' + post.url + '"></a>' +
+      '<a href="#" class="thumbnail"><img src="' + post.url + '" onError="this.onerror=null;this.src=\'http://s.quickmeme.com/img/1e/1ec9a271bcc921ea5017c45bf024b7025f1b382baec33928b3da29eb37f203f5.jpg\';"></a>' +
       '<a href="/user/' + post.userId + '">' + post.displayName + '</a>' +
     '</div>' +
   '</div>');

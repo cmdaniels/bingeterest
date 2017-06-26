@@ -10,7 +10,7 @@ firebase.database().ref('posts/').once('value', function(snapshot) {
             '<h3 class="panel-title">' + post.title + '</h3>' +
           '</div>' +
           '<div class="panel-body">' +
-            '<a href="#" class="thumbnail"><img src="' + post.url + '"></a>' +
+            '<a href="#" class="thumbnail"><img src="' + post.url + '" onError="this.onerror=null;this.src=\'http://s.quickmeme.com/img/1e/1ec9a271bcc921ea5017c45bf024b7025f1b382baec33928b3da29eb37f203f5.jpg\';"></a>' +
           '</div>' +
         '</div>');
       }
