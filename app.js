@@ -15,7 +15,7 @@ app.get('/bingeboard', function(req, res) {
   res.sendFile(__dirname + '/bingeboard.html');
 });
 
-app.get('/:uid', function(req, res) {
+app.get('/user/:uid', function(req, res) {
   res.sendFile(__dirname + '/user.html');
 });
 

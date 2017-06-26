@@ -9,7 +9,7 @@ firebase.database().ref('posts/').once('value', function(snapshot) {
         '</div>' +
         '<div class="panel-body">' +
           '<a href="#" class="thumbnail"><img src="' + post.url + '"></a>' +
-          '<a href="/' + post.userId + '">' + post.displayName + '</a>' +
+          '<a href="/user/' + post.userId + '">' + post.displayName + '</a>' +
         '</div>' +
       '</div>');
     }
